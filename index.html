@@ -99,7 +99,7 @@
         /* --- HERO SECTION --- */
         .hero {
             position: relative;
-            height: 100vh;
+            height: 100vh; /* Full screen height */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -115,18 +115,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* PLACEHOLDER: Replace this URL with your Virat Kohli Image */
-            background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop'); 
+            /* YOUR IMAGE URL IS HERE */
+            background-image: url('https://i.postimg.cc/bwKwYzSN/IMG-20251214-164952-171.jpg'); 
+            /* 'cover' ensures no bezels/borders */
             background-size: cover;
-            background-position: center;
+            /* 'top center' aligns the image to the top so Virat is visible */
+            background-position: top center; 
             z-index: -1;
-            filter: brightness(0.4) contrast(1.1);
+            /* Darkens image so text is readable */
+            filter: brightness(0.3) contrast(1.2);
         }
 
         .hero-content {
             z-index: 2;
             max-width: 800px;
             animation: fadeIn 1s ease-out;
+            margin-top: 60px; /* Slight offset for the header */
         }
 
         .hero h1 {
@@ -170,7 +174,7 @@
         }
         .stat-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* --- VIRAT SECTION --- */
+        /* --- VIRAT SECTION (Lower Section) --- */
         .king-section {
             display: flex;
             flex-wrap: wrap;
