@@ -99,7 +99,7 @@
         /* --- HERO SECTION --- */
         .hero {
             position: relative;
-            height: 100vh; /* Full screen height */
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -115,14 +115,11 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* YOUR IMAGE URL IS HERE */
+            /* Your custom image */
             background-image: url('https://i.postimg.cc/bwKwYzSN/IMG-20251214-164952-171.jpg'); 
-            /* 'cover' ensures no bezels/borders */
             background-size: cover;
-            /* 'top center' aligns the image to the top so Virat is visible */
             background-position: top center; 
             z-index: -1;
-            /* Darkens image so text is readable */
             filter: brightness(0.3) contrast(1.2);
         }
 
@@ -130,7 +127,7 @@
             z-index: 2;
             max-width: 800px;
             animation: fadeIn 1s ease-out;
-            margin-top: 60px; /* Slight offset for the header */
+            margin-top: 60px;
         }
 
         .hero h1 {
@@ -174,59 +171,6 @@
         }
         .stat-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* --- VIRAT SECTION (Lower Section) --- */
-        .king-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 80px 5%;
-            background: var(--dark-bg);
-            gap: 40px;
-        }
-
-        .king-image {
-            flex: 1 1 400px;
-            position: relative;
-        }
-
-        .king-image img {
-            width: 100%;
-            border-radius: 20px;
-            /* Simple glowing border effect */
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-            border: 2px solid var(--primary-gold);
-        }
-
-        .king-text {
-            flex: 1 1 400px;
-        }
-
-        .king-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .check-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-        }
-
-        .check-list li::before {
-            content: '✓';
-            color: var(--dark-bg);
-            background: var(--primary-gold);
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
         /* --- JOIN CTA --- */
         .cta-section {
             text-align: center;
@@ -253,8 +197,6 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .stats-bar { grid-template-columns: 1fr; }
-            .king-section { flex-direction: column-reverse; padding: 40px 5%; }
-            .king-image { width: 100%; }
         }
     </style>
 </head>
@@ -289,24 +231,6 @@
         <div class="stat-box">
             <h3>24/7</h3>
             <p>Live Support</p>
-        </div>
-    </section>
-
-    <section class="king-section">
-        <div class="king-image">
-            <img src="https://images.unsplash.com/photo-1624194686523-288276f77232?q=80&w=2070&auto=format&fit=crop" alt="Virat Kohli King Aggression">
-        </div>
-        <div class="king-text">
-            <h2 class="text-gold">Why Choose Kailash King?</h2>
-            <p style="margin-bottom: 20px;">We don't rely on luck. We rely on data, pitch analysis, and years of cricket expertise. Just like the King on the field, we dominate the prediction game.</p>
-            <ul class="check-list">
-                <li>Accurate Toss & Match Winner</li>
-                <li>Session & Lambi Updates</li>
-                <li>Jackpot Call Notifications</li>
-                <li>Full IPL & World Cup Coverage</li>
-            </ul>
-            <br>
-            <a href="#" class="btn btn-telegram">Open Free Channel 🚀</a>
         </div>
     </section>
 
