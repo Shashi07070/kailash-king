@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kailash King 🏏 | #1 Cricket Prediction Channel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- RESET & BASICS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #FFD700;
+            --primary-gold-dim: #bfa300;
+            --accent-red: #FF003C;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1c1c1c;
+            --text-white: #ffffff;
+            --text-gray: #b3b3b3;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; }
+        ul { list-style: none; }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .text-gold { color: var(--primary-gold); }
+        .text-red { color: var(--accent-red); }
+
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--primary-gold), var(--primary-gold-dim));
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+        }
+
+        .btn-telegram {
+            background: #0088cc;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-white);
+        }
+
+        .logo span { color: var(--primary-gold); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        /* Background Image Setup */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* PLACEHOLDER: Replace this URL with your Virat Kohli Image */
+            background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: brightness(0.4) contrast(1.1);
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+        }
+
+        .stat-badge {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--primary-gold);
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--primary-gold);
+        }
+
+        /* --- FEATURES SECTION --- */
+        .stats-bar {
+            background: var(--card-bg);
+            padding: 40px 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .stat-box h3 {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+        }
+        .stat-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* --- VIRAT SECTION --- */
+        .king-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 80px 5%;
+            background: var(--dark-bg);
+            gap: 40px;
+        }
+
+        .king-image {
+            flex: 1 1 400px;
+            position: relative;
+        }
+
+        .king-image img {
+            width: 100%;
+            border-radius: 20px;
+            /* Simple glowing border effect */
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+            border: 2px solid var(--primary-gold);
+        }
+
+        .king-text {
+            flex: 1 1 400px;
+        }
+
+        .king-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .check-list li::before {
+            content: '✓';
+            color: var(--dark-bg);
+            background: var(--primary-gold);
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        /* --- JOIN CTA --- */
+        .cta-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #000);
+            border-top: 1px solid #333;
+        }
+
+        .disclaimer {
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #555;
+            background: #000;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .stats-bar { grid-template-columns: 1fr; }
+            .king-section { flex-direction: column-reverse; padding: 40px 5%; }
+            .king-image { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">KAILASH🏏<span class="text-gold">KING</span></div>
+        <a href="#" class="btn btn-telegram" style="padding: 10px 20px; font-size: 0.9rem;">Join Telegram</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        
+        <div class="hero-content">
+            <div class="stat-badge">🔥 92% Accuracy in IPL 2024</div>
+            <h1>Don't Just Watch.<br> <span class="text-gold">Predict Like a King.</span></h1>
+            <p>Join India's most trusted cricket prediction community. Get session reports, toss updates, and match winners instantly.</p>
+            <a href="#" class="btn btn-primary">JOIN KAILASH KING FREE 🥎</a>
+            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">*Limited Slots Available for Next Match</p>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="stat-box">
+            <h3>50K+</h3>
+            <p>Active Members</p>
+        </div>
+        <div class="stat-box">
+            <h3>95%</h3>
+            <p>Accuracy Rate</p>
+        </div>
+        <div class="stat-box">
+            <h3>24/7</h3>
+            <p>Live Support</p>
+        </div>
+    </section>
+
+    <section class="king-section">
+        <div class="king-image">
+            <img src="https://images.unsplash.com/photo-1624194686523-288276f77232?q=80&w=2070&auto=format&fit=crop" alt="Virat Kohli King Aggression">
+        </div>
+        <div class="king-text">
+            <h2 class="text-gold">Why Choose Kailash King?</h2>
+            <p style="margin-bottom: 20px;">We don't rely on luck. We rely on data, pitch analysis, and years of cricket expertise. Just like the King on the field, we dominate the prediction game.</p>
+            <ul class="check-list">
+                <li>Accurate Toss & Match Winner</li>
+                <li>Session & Lambi Updates</li>
+                <li>Jackpot Call Notifications</li>
+                <li>Full IPL & World Cup Coverage</li>
+            </ul>
+            <br>
+            <a href="#" class="btn btn-telegram">Open Free Channel 🚀</a>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to <span class="text-gold">Win Big?</span></h2>
+        <p style="max-width: 600px; margin: 20px auto; color: #ccc;">The next match is starting soon. Don't miss the winning call.</p>
+        <a href="#" class="btn btn-primary">JOIN TELEGRAM CHANNEL NOW</a>
+    </section>
+
+    <footer class="disclaimer">
+        <p><strong>Disclaimer:</strong> This service is for information and entertainment purposes only. Cricket betting involves financial risk and may be addictive. Please play responsibly. Not for users under 18.</p>
+        <p>&copy; 2025 Kailash King Prediction. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
