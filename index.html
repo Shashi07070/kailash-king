@@ -58,6 +58,7 @@
             cursor: pointer;
             border: none;
             box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            margin-top: 20px;
         }
 
         .btn-primary {
@@ -135,6 +136,10 @@
             margin-bottom: 20px;
             line-height: 1.1;
         }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
 
         .hero p {
             font-size: 1.2rem;
@@ -144,106 +149,51 @@
 
         .stat-badge {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--primary-gold);
-            padding: 8px 20px;
-            border-radius: 30px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
             display: inline-block;
             margin-bottom: 20px;
+            font-size: 0.9rem;
             font-weight: 600;
-            color: var(--primary-gold);
         }
 
-        /* --- FEATURES SECTION --- */
-        .stats-bar {
-            background: var(--card-bg);
-            padding: 40px 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-            border-bottom: 1px solid #333;
-        }
-
-        .stat-box h3 {
-            font-size: 2.5rem;
-            color: var(--primary-gold);
-        }
-        .stat-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
-
-        /* --- JOIN CTA --- */
-        .cta-section {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #1a1a1a, #000);
-            border-top: 1px solid #333;
-        }
-
-        .disclaimer {
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.8rem;
-            color: #555;
-            background: #000;
-        }
-
-        /* --- ANIMATIONS --- */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .stats-bar { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">KAILASH🏏<span class="text-gold">KING</span></div>
-        <a href="#" class="btn btn-telegram" style="padding: 10px 20px; font-size: 0.9rem;">Join Telegram</a>
+        <div class="logo">KAILASH<span>KING</span></div>
     </header>
 
     <section class="hero">
         <div class="hero-bg"></div>
         
         <div class="hero-content">
-            <div class="stat-badge">🔥 95% Accuracy in IPL 2025</div>
-            <h1>Don't Just Watch.<br> <span class="text-gold">Predict Like a King.</span></h1>
-            <p>Join India's most trusted cricket prediction community. Get session reports, toss updates, and match winners instantly.</p>
-            <a href="#" class="btn btn-primary">JOIN KAILASH KING FREE🏏🥎</a>
-            <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">*Limited Slots Available for Next Match</p>
+            <div class="stat-badge">
+                <span class="text-gold">⚡ 95% Accuracy Rate</span>
+            </div>
+            
+            <h1>
+                CRICKET <span class="text-gold">PREDICTION</span><br>
+                <span class="text-red">KAILASH KING</span>
+            </h1>
+            
+            <p>
+                Get the most accurate Toss, Match, and Session reports. 
+                Join India's most trusted prediction channel now.
+            </p>
+
+            <a href="https://t.me/+w-LWZmrQ7eAzMjI1" class="btn btn-primary" target="_blank">
+                JOIN FREE CHANNEL 🚀
+            </a>
         </div>
     </section>
-
-    <section class="stats-bar">
-        <div class="stat-box">
-            <h3>50K+</h3>
-            <p>Active Members</p>
-        </div>
-        <div class="stat-box">
-            <h3>95%</h3>
-            <p>Accuracy Rate</p>
-        </div>
-        <div class="stat-box">
-            <h3>24/7</h3>
-            <p>Live Support</p>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>Ready to <span class="text-gold">Win Big?</span></h2>
-        <p style="max-width: 600px; margin: 20px auto; color: #ccc;">The next match is starting soon. Don't miss the winning call.</p>
-        <a href="#" class="btn btn-primary">JOIN TELEGRAM CHANNEL NOW</a>
-    </section>
-
-    <footer class="disclaimer">
-        <p><strong>Disclaimer:</strong> This service is for information and entertainment purposes only. Cricket betting involves financial risk and may be addictive. Please play responsibly. Not for users under 18.</p>
-        <p>&copy; 2025 Kailash King Prediction. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
