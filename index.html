@@ -1,162 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- META SAFE TITLE -->
-    <title>Kailash King | Cricket Knowledge & Sports Education</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- META DESCRIPTION (IMPORTANT) -->
-    <meta name="description" content="Kailash King is a cricket knowledge platform focused on learning, match understanding, team discussions and sports education. No tips or predictions.">
+<title>Kailash King | Cricket Knowledge Platform</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<meta name="description" content="Cricket knowledge platform focused on learning, match understanding, team discussion and sports education.">
 
-    <style>
-        /* --- RESET & BASICS --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        :root {
-            --primary-gold: #FFD700;
-            --primary-gold-dim: #bfa300;
-            --accent-red: #FF003C;
-            --dark-bg: #0a0a0a;
-            --card-bg: #1c1c1c;
-            --text-white: #ffffff;
-            --text-gray: #b3b3b3;
-            --glass: rgba(255, 255, 255, 0.05);
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f9fc;
+    color:#111;
+    line-height:1.6;
+}
+a{text-decoration:none}
+.container{max-width:1150px;margin:auto;padding:0 20px}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+/* HEADER */
+header{
+    background:#0b1c2d;
+    padding:18px 0;
+}
+.logo{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+}
+.logo span{color:#f5c842}
 
-        a { text-decoration: none; }
-        ul { list-style: none; }
+/* HERO */
+.hero{
+    background:linear-gradient(120deg,#0b1c2d,#102a44);
+    color:#fff;
+    padding:90px 0 80px;
+    text-align:center;
+}
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+}
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+    color:#d0d7e2;
+}
+.hero .btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:14px 36px;
+    background:#f5c842;
+    color:#000;
+    border-radius:40px;
+    font-weight:600;
+}
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+/* SECTIONS */
+section{padding:70px 0}
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+.section-title h2{
+    font-size:32px;
+    color:#0b1c2d;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+.card h3{
+    margin-bottom:10px;
+    color:#0b1c2d;
+}
+.card p{
+    font-size:15px;
+    color:#555;
+}
 
-        .text-gold { color: var(--primary-gold); }
+/* ABOUT */
+.about{
+    background:#ffffff;
+    text-align:center;
+}
+.about p{
+    max-width:800px;
+    margin:20px auto 0;
+    color:#444;
+}
 
-        /* --- BUTTONS --- */
-        .btn {
-            display: inline-block;
-            padding: 16px 40px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            margin-top: 20px;
-        }
+/* COMMUNITY */
+.community{
+    background:#0b1c2d;
+    color:#fff;
+    text-align:center;
+}
+.community p{
+    color:#d0d7e2;
+}
+.community .btn{
+    background:#25a3e1;
+    color:#fff;
+    margin-top:25px;
+}
 
-        .btn-primary {
-            background: linear-gradient(45deg, var(--primary-gold), var(--primary-gold-dim));
-            color: #000;
-        }
-
-        /* --- HEADER --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            position: absolute;
-            width: 100%;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--text-white);
-        }
-
-        .logo span { color: var(--primary-gold); }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://i.postimg.cc/bwKwYzSN/IMG-20251214-164952-171.jpg');
-            background-size: cover;
-            background-position: top center;
-            z-index: -1;
-            filter: brightness(0.35);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin-top: 60px;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            line-height: 1.1;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
-    </style>
+/* FOOTER */
+footer{
+    background:#081421;
+    color:#aeb7c2;
+    text-align:center;
+    padding:25px 15px;
+    font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
+  <div class="container">
     <div class="logo">Kailash <span>King</span></div>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="hero-bg"></div>
-
-    <div class="hero-content">
-        <!-- META SAFE HERO TEXT -->
-        <h1>Cricket Knowledge<br><span class="text-gold">Learning Platform</span></h1>
-
-        <p>
-            This platform focuses on cricket understanding,  
-            team discussions, match situations and sports education.  
-            Content is shared for learning and awareness purposes only.
-        </p>
-
-        <!-- SAFE CTA -->
-        <a href="#learn" class="btn btn-primary">Explore Cricket Content</a>
-    </div>
+  <div class="container">
+    <h1>Understand Cricket Beyond Scores 🏏</h1>
+    <p>
+      A cricket knowledge platform focused on learning,<br>
+      match situations, team discussions & sports awareness.
+    </p>
+    <a href="#learn" class="btn">Explore Cricket Content</a>
+  </div>
 </section>
-<footer style="text-align:center; padding:30px; color:#b3b3b3; font-size:14px;">
-This website is for cricket education and general sports discussion only.
-We do not provide betting tips, predictions or guaranteed outcomes.
+
+<!-- LEARNING -->
+<section id="learn">
+  <div class="container">
+    <div class="section-title">
+      <h2>What You’ll Learn</h2>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🧠 Match Situations</h3>
+        <p>Understanding different match scenarios and momentum shifts.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Team Discussion</h3>
+        <p>Player roles, team balance and strategy insights.</p>
+      </div>
+      <div class="card">
+        <h3>🏏 Cricket Basics</h3>
+        <p>Rules, formats and core concepts explained clearly.</p>
+      </div>
+      <div class="card">
+        <h3>📘 Sports Awareness</h3>
+        <p>General cricket knowledge for informed fans.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About This Platform</h2>
+    </div>
+    <p>
+      This platform is created for cricket lovers who want to understand the game better.
+      Content shared here is purely for educational and discussion purposes.
+    </p>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community">
+  <div class="container">
+    <h2>Join Our Cricket Discussion Community</h2>
+    <p>
+      For general cricket discussions and updates,<br>
+      you may explore our community platform.
+    </p>
+    <a href="https://t.me/+D72AW8XzGSE0OTI1" class="btn">Visit Community Page</a>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<footer>
+  This website is for cricket education and general sports discussion only. <br>
+  We do not provide betting tips, predictions or guaranteed outcomes.
 </footer>
+
+</body>
+</html>
